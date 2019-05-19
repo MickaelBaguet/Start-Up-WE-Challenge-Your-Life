@@ -12,41 +12,91 @@
 <body>
     <!-- container Bootstrap -->
     <div class="container">
-      <div class="">
-        <p id="textProgBar">Vous êtes au niveau 5. Gagnez encore 120 points d'expérience pour atteindre le niveau 6 !</p>
+      <div class="d-flex justify-content-between">
+        <p class="textLevel">Niv. 5</p>
+        <p class="textLevel">180 / 300 xp</p>
+        <p class="textLevel">Niv. 6</p>
       </div>
       <!-- Progress Bar -->
       <div class="progress">
-        <div class="progress-bar bg-dark" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar bg-dark" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="">
+        <p class="textProgBar">Vous êtes au niveau 5. Gagnez encore 120 points d'expérience pour atteindre le niveau 6 !</p>
       </div>
       <div class="">
         <div class="d-flex justify-content-around mt-5">
           <div class="text-center mt-5">
-            <p><b>Demilly Victor</b></p>
-            <p><i>Développeur Web Junior</i></p>
+            <p id="nameFirstName">Demilly Victor</p>
+            <p id="profession">Développeur Web</p>
           </div>
           <div class="text-center">
             <div>
               <img src="assets/img/victor.jpg" id="victorBig" alt="Photo de profil" width="150" height="150">
             </div>
-            <!-- <button type="button" class="btn btn-secondary my">Déconnexion</button> -->
             <a href="index.html" class="badge badge-danger mt-3">Déconnexion</a>
           </div>
         </div>
       </div>
       <div class="d-flex justify-content-center mt-5">
-        <button type="button" class="btn btn-success" id="QuestionnaireBtn">Répondre au questionnaire</button>
+        <button type="button" class="btn btn-dark" id="QuestionnaireBtn" data-toggle="modal" data-target="#questionnaireModal">Répondre au questionnaire</button>
+      </div>
+      <!-- Modal Questionnaire -->
+      <div class="modal" id="questionnaireModal" tabindex="-1" role="dialog" aria-labelledby="questionnaireModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Soyez honnête !</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="questionnaireModal">
+              <label for="">Ressentez-vous l'importance du travail que vous fournissez ?</label>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="response1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label mx-5 px-4" for="response1">Oui</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="response2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label mx-5 px-4" for="response2">Non</label>
+              </div>
+              <label class="mt-3" for="">Ressentez-vous une sensation de mal-être auprès de certains de vos coéquipiers ?</label>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="response3" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label mx-5 px-4" for="response3">Oui</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="response4" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label mx-5 px-4" for="response4">Non</label>
+              </div>
+              <label class="mt-3" for="">Vous sentez-vous sous pression à l'instant T ?</label>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="response5" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label mx-5 px-4" for="response5">Oui</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="response6" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label mx-5 px-4" for="response6">Non</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-primary">Envoyer</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="d-flex justify-content-around text-center mt-3">
-        <a href="bouger.html" type="button" class="btn btn-primary pt-4 col-3 categoriesbtn" data-toggle="modal" data-target="#exampleModal3">Bouger</a>
-        <a href="manger.html" type="button" class="btn btn-warning pt-4 col-3 categoriesbtn" data-toggle="modal" data-target="#exampleModal4">Manger</a>
-        <a href="zen.html" type="button" class="btn btn-danger pt-4 col-3 categoriesbtn" data-toggle="modal" data-target="#exampleModal5">Zen</a>
+        <a href="bouger.html" type="button" class="btn btn-warning pt-4 categoriesbtn" data-toggle="modal" data-target="#exampleModal3">Bouger</a>
+        <a href="manger.html" type="button" class="btn btn-success pt-4 categoriesbtn" data-toggle="modal" data-target="#exampleModal4">Manger</a>
+        <a href="zen.html" type="button" class="btn btn-primary pt-4 categoriesbtn" data-toggle="modal" data-target="#exampleModal5">Zen</a>
       </div>
       <!--  -->
       <div class="mt-5">
         <p id="historiqueTitle">Historique :</p>
       </div>
-      <p class="historiqueMessages">Vous avez réussi votre défi zen en présentant votre projet devant tout un public. Vive Challenge your life !</p>
+      <p class="historiqueMessages">Vous avez réussi votre défi zen en présentant votre projet devant tout un public. Vive Challenge Your Life !</p>
       <span class="time-right">Envoyé le 19 mai à 16:00</span>
       <p class="historiqueMessages">Vous avez achevé votre petit-déjeuner équilibré à base de jus de banane et noisettes biologiques et gagné 50 points d'expérience. Continuez comme ça !</p>
       <span class="time-right">Envoyé le 18 mai à 9:30</span>
@@ -66,19 +116,19 @@
             <div class="modal-body">
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio1">Choix Bouger 1</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio1">Prenez 30 minutes dans la journée pour travailler debout.</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio2">Choix Bouger 2</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio2">Ce matin, vous ne pouvez contacter vos collègues qu'en face-à-face.</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio3">Choix Bouger 3</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio3">Vos pauses de la journée se feront forcément en extérieur.</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio4">Choix Bouger 4</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio4">Toutes les deux heures, faites deux fois le tour de la salle de travail !</label>
               </div>
             </div>
             <div class="modal-footer">
@@ -101,19 +151,19 @@
             <div class="modal-body">
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio5">Choix Manger 1</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio5">Ce midi, mangez avec vos collègues !</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio6">Choix Manger 2</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio6">Aujourd'hui, privilégiez un régime à base de légumes.</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio7" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio7">Choix Manger 3</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio7">Ce soir, mangez léger pour vous assurer d'être en forme demain !</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio8">Choix Manger 4</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio8">Vers 16 heures, prenez le temps de prendre une pause goûter.</label>
               </div>
             </div>
             <div class="modal-footer">
@@ -136,19 +186,19 @@
             <div class="modal-body">
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio9" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio9">Choix Zen 1</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio9">Démarrez votre journée de travail avec 5 minutes de gainage.</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio10" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio10">Choix Zen 2</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio10">Pendant une heure aujourd'hui, vous resterez assis sur le ballon du bureau.</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio11" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio11">Choix Zen 3</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio11">Relaxez vos yeux avec la méthode "coquille".</label>
               </div>
               <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio12" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label mx-5 px-4" for="customRadio12">Choix Zen 4</label>
+                <label class="custom-control-label mx-5 px-4" for="customRadio12">Réservez-vous quelques instants pour prendre de lentes et profondes inspirations</label>
               </div>
             </div>
             <div class="modal-footer">
